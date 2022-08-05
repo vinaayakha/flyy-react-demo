@@ -32,7 +32,7 @@ function App() {
         var data = {
           package_name: "com.theflyy.demo.demotester1",
           partner_id: "${partner}",
-          ext_user_token: "nAlyijFANB",
+          ext_user_token: "token_from_api",
 	  environment: "STAGE"
         };
         var flyySDK = new FlyySDK();
