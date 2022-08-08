@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect } from 'react';
-import axios from 'axios';
 
 function App() {
     useEffect(() => {
 
-      const partner = "partner_id";
+      const partner = "89a3e8bed066cc07268e";
+      const token = "SbU9iEh8Nn";
 
       /*
       const ext_user_id = "<user-id>";
@@ -19,38 +19,36 @@ function App() {
         console.log(res);
       */
       
-      const script = document.createElement("script");    
+      //const script = document.createElement("script");    
    
-      script.src = "https://ghc.theflyy.com/assets/flyy-web-sdk-package/v1.0.6/flyy-sdk.js";
+      //script.src = "https://ghc.theflyy.com/assets/flyy-web-sdk-package/v1.0.6/flyy-sdk.js";
       //script.async = true;
 
-      document.body.appendChild(script);
+      //document.body.appendChild(script);
 
       const sc2  = document.createElement("script");
-      sc2.async = true;
-      sc2.innerHTML = `(function () {
+      sc2.innerHTML = `
+        (function () {
         var data = {
           package_name: "com.theflyy.demo.demotester1",
           partner_id: "${partner}",
-          ext_user_token: "token_from_api",
-	  environment: "STAGE"
+          ext_user_token: "${token}",
+	        environment: "STAGE",
         };
         var flyySDK = new FlyySDK();
-	flyySDK.startReferralTracking();
+	      flyySDK.startReferralTracking();
+        //flyySDK.setActionButtonPosition('left');
+        //flyySDK.setActionButtonColor('#faa232');
+        //flyySDK.setActionButtonText('Rewardsssf');
+        
 	      flyySDK.initSDK(JSON.stringify(data));
-      })();
-
-
-function myFunction() {
-        if (window.webkit) {
-                window.webkit.messageHandlers.handleMessage.postMessage({ action: "go-back" });
-        } else {
-
-        }
-}`;
+        
+      })()`;
    
       
       document.body.appendChild(sc2);
+      console.log(Date.now());
+
     });
 
   return (
