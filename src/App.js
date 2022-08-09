@@ -37,9 +37,9 @@ function App() {
         };
         var flyySDK = new FlyySDK();
 	      flyySDK.startReferralTracking();
-        //flyySDK.setActionButtonPosition('left');
-        //flyySDK.setActionButtonColor('#faa232');
-        //flyySDK.setActionButtonText('Rewardsssf');
+        flyySDK.setActionButtonPosition('left');
+        flyySDK.setActionButtonColor('#faa232');
+        flyySDK.setActionButtonText('Rewardsssf');
         
 	      flyySDK.initSDK(JSON.stringify(data));
         
