@@ -37,7 +37,7 @@ function App() {
         };
         var flyySDK = new FlyySDK();
 	      flyySDK.startReferralTracking();
-        flyySDK.setActionButtonPosition('left');
+        flyySDK.setActionButtonPosition('right');
         flyySDK.setActionButtonColor('#faa232');
         flyySDK.setActionButtonText('Rewardsssf');
         
